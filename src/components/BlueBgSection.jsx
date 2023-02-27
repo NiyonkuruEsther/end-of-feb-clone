@@ -1,17 +1,31 @@
-import React from "react";
-import Wrapper from "./Wrapper";
+import Image from "next/image";
+import Link from "next/link";
 
-const BlueBgSection = () => {
+const Follow = () => {
   return (
-    <Wrapper styles={`bg-lightBlue flex flex-col text-white`}>
-      <p>Follow us </p>
-      <div className="flex">
-        {[1, 2, 3, 4].map((item, i) => {
-          return <div key={i}>Facebook</div>;
-        })}
+    <div className="bg-gray1 py-20 relative z-30">
+      <div className="h-[25rem] bg-blue1 w-full text-white flex flex-col items-center justify-center relative z-10">
+        <h2 className="font-bold text-6xl hover:pr-24 relative z-30">
+          Follow Us
+        </h2>
+        <div className="relative z-30">
+          {["facebook", "twitter", "instagram", "linkedin"].map(
+            (item, index) => {
+              return (
+                <Link
+                  key={index}
+                  href="/"
+                  className="underline text-3xl hover:text-black hover:bg-white w-fit"
+                >
+                  {item},{" "}
+                </Link>
+              );
+            }
+          )}
+        </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 
-export default BlueBgSection;
+export default Follow;

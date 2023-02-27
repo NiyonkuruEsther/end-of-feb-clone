@@ -7,16 +7,13 @@ const ImageRightTextLeft = ({ arr, h, p }) => {
       <p className="text-[30px]">{h}</p>
       <p className="text-lg">{p}</p>
       <div className="grid grid-cols-2 gap-5">
-        {" "}
         {arr.map((item, i) => {
           item = [...arr];
-          console.log(item[3]);
           return (
             <div
               key={i}
               className="flex border justify-between border-white gap-4"
             >
-              {" "}
               <div className="flex flex-col justify-end gap-2 whitespace-preline p-5">
                 <h1 className="text-2xl">{item[0][i]}</h1>
                 <p className="text-lg">{item[1][i]}</p>

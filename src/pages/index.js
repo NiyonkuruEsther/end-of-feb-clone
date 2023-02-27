@@ -12,6 +12,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ImageTextSection from "@/components/ImageTextSection";
 import ImageTextSectionSecond from "@/components/ImageTextSectionSecond";
+import Explore from "@/components/Explore";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function Home() {
           <div className="bg-darkGray">
             <ImageTextSectionSecond />
           </div>
+          <Explore />
           <div className="bg-mediumGray pt-16 pb-24">
             <IconTextCard
               h="Important quicklinks"
@@ -182,11 +184,28 @@ export default function Home() {
               ]}
             />
           </div>
-          <div>
+          <div className="py-12">
             <Wrapper styles={`bg-mediumGray text-white`}>
-              <h1>Information on Ukraine and coronavirus</h1>
+              <h1 className="text-2xl">
+                Information on Ukraine and coronavirus
+              </h1>
             </Wrapper>
-            {/* <ImageRightTextLeft arr={[1, 2]} /> */}
+            <ImageRightTextLeft
+              arr={[
+                [
+                  "School of Arts, Design and Architecture",
+                  "School of Business",
+                ],
+                [
+                  "School of Arts, Design and Architecture",
+                  "Welcome to the School of Chemical Engineering!",
+                ],
+                [
+                  "https://www.aalto.fi/sites/g/files/flghsv161/files/styles/1_160w_160h_d/public/2018-10/unto_rautio_aalto_dsc4772.jpg?h=d2ed74d8&itok=swcZJQs4",
+                  "https://www.aalto.fi/sites/g/files/flghsv161/files/styles/1_160w_160h_d/public/2018-06/2011-05-11_johdon_kiertokaynti_otaniemi_eng_by_juha_juvonen49_original_0.jpg?h=6f8e8448&itok=_25uKN4_",
+                ],
+              ]}
+            />
           </div>
           <div className="text-lg bg-darkGray pt-14 pb-20">
             <Wrapper styles={`bg-darkGray text-white flex flex-col gap-4 pb-6`}>
@@ -218,7 +237,9 @@ export default function Home() {
           </div>
           <BlueBgSection />
         </div>
-        <Footer />
+        <div className="bg-darkGray">
+          <Footer />
+        </div>
       </div>
     </>
   );

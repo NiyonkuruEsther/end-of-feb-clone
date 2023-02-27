@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { BiChevronDown, BiLockAlt, BiMenu, BiSearch } from "react-icons/bi";
 import { CiHeart } from "react-icons/ci";
 import { IoGlobeSharp } from "react-icons/io5";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(0);
+
+  useEffect(() => {
+    const changescrolled = () => {
+      window.scrollY >= 10
+        ? setScrolled(window.scrollY)
+        : setScrolled(window.scrollY);
+    };
+    window.addEventListener("scroll", changescrolled);
+    return () => {
+      window.removeEventListener("scroll", changescrolled);
+    };
+  }, []);
   return (
-    <div className="fixed px-20  z-[9999] border-b border-white  w-full inset-x-0 top-0 flex justify-between items-center py-3 bg-mediumGray text-white">
+    <div
+      className={`fixed px-20 z-[9999] border-b border-white  w-full inset-x-0 top-0 flex justify-between items-center py-3 bg-mediumGray text-white  `}
+    >
       <div className="group flex flex-col justify-center items-center">
-        <h1 className='text-7xl font-bold group-hover:after:content-["\""] after:content-["?"]'>
+        <h1
+          className={` font-bold group-hover:after:content-["\""] after:content-["?"] ${
+            scrolled > 19 ? " text-2xl" : "text-7xl transition-all duration-150"
+          } `}
+        >
           A
         </h1>
         <h4>Aalto University</h4>

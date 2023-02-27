@@ -1,128 +1,173 @@
 import Link from "next/link";
-import React from "react";
-import { AiFillFacebook, AiOutlineQuestion } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 
 const Footer = () => {
   return (
-    <Wrapper styles={`bg-darkGray text-white `}>
-      {/* Upper part */}
-      <div className="grid grid-cols-4 text-xl">
-        {" "}
-        {/* first Column */}
-        <div className="flex flex-col gap-6">
+    <Wrapper style="">
+      <div className="border-t bg-darkGray text-white py-10 relative z-30">
+        <div className=" grid grid-cols-4 pb-10 ">
           <div>
-            {" "}
-            <div className="flex text-white text-7xl font-extrabold items-center">
-              <p>A</p>
-              <p>?</p>
-            </div>
-            <p className="text-xs font-semibold">Aalto University</p>
-          </div>
-          <div>
-            {[1, 2, 3, 4].map((item, i) => {
-              return <p key={i}>Aalto University</p>;
-            })}
-          </div>
-          <div className="flex flex-col gap-4">
-            <p>Follow us:</p>
-            <div className="flex gap-2s">
+            <div>
               {" "}
-              {[1, 2, 3, 4].map((item, i) => {
+              <div className="flex text-white text-7xl font-extrabold items-center">
+                <p>A</p>
+                <p>?</p>
+              </div>
+              <p className="text-xs font-semibold">Aalto University</p>
+            </div>
+            <p>Aalto University</p>
+            <p> P.O. Box 11000 (Otakaari 1B)</p>
+            <p> FI-00076 AALTO</p>
+            <p> Switchboard: +358 9 47001</p>
+
+            <div className="pt-5">
+              <h2>Follow us:</h2>
+              <div className="flex gap-2">
+                <Link href={"/"}>
+                  <FaFacebookF className="hover:bg-neutral-700 rounded-full p-1 text-2xl" />
+                </Link>
+                <Link href={"/"}>
+                  <FaTwitter className="hover:bg-neutral-700 rounded-full p-1 text-2xl" />
+                </Link>
+                <Link href={"/"}>
+                  <FaLinkedinIn className="hover:bg-neutral-700 rounded-full p-1 text-2xl" />
+                </Link>
+                <Link href={"/"}>
+                  <FaFacebookF className="hover:bg-neutral-700 rounded-full p-1 text-2xl" />
+                </Link>
+                <Link href={"/"}>
+                  <FaTwitter className="hover:bg-neutral-700 rounded-full p-1 text-2xl" />
+                </Link>
+                <Link href={"/"}>
+                  <FaLinkedinIn className="hover:bg-neutral-700 rounded-full p-1 text-2xl" />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl">Quicklinks</h2>
+            <div className="pt-3 space-y-1">
+              {[
+                "Research and artistic outputs",
+                "Library – Learning Centre",
+                "Admissions",
+                "Alumni",
+                "Media",
+                "IT services",
+                "Open University",
+                "Aalto University Shop",
+              ].map((item) => {
                 return (
-                  <p key={i}>
-                    <AiFillFacebook />
-                  </p>
+                  <Link
+                    key={item}
+                    href="/"
+                    className="block text-sm w-fit underline hover:bg-neutral-700"
+                  >
+                    {" "}
+                    {item}
+                  </Link>
                 );
               })}
             </div>
-          </div>
-        </div>
-        {/* Second Column */}
-        <div>
-          <div className="grid gap-4">
-            <p>Quicklinks</p>
-            <div>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, i) => {
+            <h2 className="text-xl pt-7">Latest</h2>
+            <div className="pt-3 space-y-1">
+              {["News", "Events", "Careers"].map((item) => {
                 return (
-                  <Link href={""} key={i}>
-                    <p className="underline">Aalto University</p>{" "}
+                  <Link
+                    key={item}
+                    href="/"
+                    className="block text-sm w-fit underline hover:bg-neutral-700"
+                  >
+                    {" "}
+                    {item}
                   </Link>
                 );
               })}
             </div>
           </div>
-          <div className="grid gap-4">
-            <p>Latest</p>
-            <div>
-              {[1, 2, 3].map((item, i) => {
+          <div>
+            <h2 className="text-xl">Contact</h2>
+            <div className="pt-3 space-y-1">
+              {["Campus maps", "Contact information"].map((item) => {
                 return (
-                  <Link href={""} key={i}>
-                    <p className="underline">Aalto University</p>{" "}
+                  <Link
+                    key={item}
+                    href="/"
+                    className="block text-sm w-fit underline hover:bg-neutral-700"
+                  >
+                    {" "}
+                    {item}
+                  </Link>
+                );
+              })}
+            </div>
+            <h2 className="text-xl pt-7">For students</h2>
+            <div className="pt-3 space-y-1">
+              {[
+                "Student Guide",
+                "Webmail",
+                "MyCourses",
+                "MyStudies",
+                "Sisu",
+              ].map((item) => {
+                return (
+                  <Link
+                    key={item}
+                    href="/"
+                    className="block text-sm w-fit underline hover:bg-neutral-700"
+                  >
+                    {" "}
+                    {item}
                   </Link>
                 );
               })}
             </div>
           </div>
-        </div>
-        {/* Third Column */}
-        <div>
-          <div className="flex flex-col gap-4">
-            <p>Contact us</p>
-            <div>
-              {[1, 2].map((item, i) => {
-                return (
-                  <Link href={""} key={i}>
-                    <p className="underline">Contact information</p>{" "}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <p>Contact us</p>
-            <div>
-              {[1, 2, 4, 5, 6, 7].map((item, i) => {
-                return (
-                  <Link href={""} key={i}>
-                    <p className="underline">Contact information</p>{" "}
-                  </Link>
-                );
-              })}
-            </div>
+          <div className="space-y-7">
+            <h2 className="text-2xl">Together towards a better world.</h2>
+            <p>
+              Support new ideas, research, work and leadership development
+              towards a stronger Finland.
+            </p>
+            <button></button>
           </div>
         </div>
-        {/* Fourth Column */}
-        <div className="flex flex-col gap-4">
-          <h1 className="text-3xl">Together towards a better world.</h1>
-          <p>
-            Support new ideas, research, work and leadership development towards
-            a stronger Finland.
-          </p>
-          <button className="bg-white px-4 text-black rounded-full">
-            Donate to our University
-          </button>
-        </div>
-      </div>
-      {/* lower part */}
-      <div className="flex justify-between">
-        <div className="flex gap-4">
-          {[1, 2, 3, 4, 5].map((item, i) => {
-            return (
-              <Link href={""} key={i}>
-                <p className="underline">Aalto University</p>{" "}
+        <div className="border-t flex pt-5">
+          <div className="flex gap-5">
+            {[
+              "Privacy notice",
+              "Cookie policy",
+              "Feedback",
+              "Accessibility statement",
+              "Cookie settings",
+            ].map((item) => (
+              <Link
+                key={item}
+                href="/"
+                className="text-sm w-fit underline hover:bg-neutral-700"
+              >
+                {" "}
+                {item}
               </Link>
-            );
-          })}
-        </div>
-        <div className="flex gap-4">
-          {[1, 2, 3].map((item, i) => {
-            return (
-              <Link href={""} key={i}>
-                <p className="underline">Aalto University</p>{" "}
+            ))}
+          </div>
+          <div className="ml-auto flex gap-5">
+            {["Suomeksi", "Svenska", "English"].map((item, index) => (
+              <Link
+                key={item}
+                href="/"
+                className={`text-sm w-fit underline ${
+                  index == 2 && "no-underline"
+                } hover:bg-neutral-700`}
+              >
+                {" "}
+                {item}
               </Link>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </Wrapper>
