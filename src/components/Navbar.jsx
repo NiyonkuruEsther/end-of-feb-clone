@@ -20,19 +20,21 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      className={`fixed px-20 z-[9999] border-b border-white  w-full inset-x-0 top-0 flex justify-between items-center py-3 bg-mediumGray text-white  `}
+      className={`fixed px-20 z-[9999] border-b border-white  w-full inset-x-0 top-0 flex justify-between items-center bg-mediumGray text-white  ${
+        scrolled > 19 ? " py-1" : "py-3 transition-all delay-200"
+      }`}
     >
       <div className="group flex flex-col justify-center items-center">
         <h1
           className={` font-bold group-hover:after:content-["\""] after:content-["?"] ${
-            scrolled > 19 ? " text-2xl" : "text-7xl transition-all duration-0"
+            scrolled > 19 ? " text-2xl" : "text-7xl transition-all delay-200"
           } `}
         >
           A
         </h1>
         <h4
           className={`${
-            scrolled > 19 ? "text-sm" : "text-4xl transition-all duration-0"
+            scrolled > 19 ? "text-[6px]" : "text-xs transition-all delay-200"
           } `}
         >
           Aalto University
