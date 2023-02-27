@@ -25,12 +25,18 @@ const Navbar = () => {
       <div className="group flex flex-col justify-center items-center">
         <h1
           className={` font-bold group-hover:after:content-["\""] after:content-["?"] ${
-            scrolled > 19 ? " text-2xl" : "text-7xl transition-all duration-150"
+            scrolled > 19 ? " text-2xl" : "text-7xl transition-all duration-0"
           } `}
         >
           A
         </h1>
-        <h4>Aalto University</h4>
+        <h4
+          className={`${
+            scrolled > 19 ? "text-sm" : "text-4xl transition-all duration-0"
+          } `}
+        >
+          Aalto University
+        </h4>
       </div>
       <div className="flex items-center gap-10">
         <ul className="flex items-center gap-10">

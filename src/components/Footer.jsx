@@ -6,11 +6,12 @@ import Wrapper from "./Wrapper";
 
 const Footer = () => {
   return (
-    <Wrapper style="">
-      <div className="border-t bg-darkGray text-white py-10 relative z-30">
+    <div className="border-t">
+      {" "}
+      <Wrapper styles=" bg-darkGray text-white py-10">
         <div className=" grid grid-cols-4 pb-10 ">
           <div>
-            <div>
+            <div className="pb-6">
               {" "}
               <div className="flex text-white text-7xl font-extrabold items-center">
                 <p>A</p>
@@ -169,8 +170,8 @@ const Footer = () => {
             ))}
           </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </div>
   );
 };
 
