@@ -29,8 +29,9 @@ export default function Home() {
         <div className="bg-mediumGray ">
           <Navbar />
         </div>
-
-        <HeroSection />
+        <div className="bg-mediumGray pt-[110px]">
+          <HeroSection />
+        </div>
         <div className="flex flex-col ">
           <div className="bg-mediumGray">
             <ImageTextSection />
