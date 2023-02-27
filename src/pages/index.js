@@ -38,7 +38,9 @@ export default function Home() {
           <div className="bg-darkGray">
             <ImageTextSectionSecond />
           </div>
-          <Explore />
+          <div className="bg-mediumGray">
+            <Explore />
+          </div>
           <div className="bg-mediumGray pt-16 pb-24">
             <IconTextCard
               h="Important quicklinks"
