@@ -142,7 +142,7 @@ const Navbar = () => {
       {/* mobolie */}
       <div
         className={`fixed px-5 lg:px-20 z-[9999] border-b border-white lg:hidden flex w-full inset-x-0 top-0  justify-between items-center bg-mediumGray text-white  ${
-          scrolled > 19
+          scrolled > 26
             ? `invisible  `
             : `py-3 visible transition-all delay-200`
         } `}
