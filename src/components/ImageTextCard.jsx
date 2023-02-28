@@ -11,7 +11,7 @@ const ImagetextCard = ({ styles, arr, news }) => {
           return (
             <div
               key={i}
-              className={`flex flex-col gap-2 border h-min md:h-full border-white bg-mediumGray ${
+              className={`group flex flex-col gap-2 border h-min md:h-full border-white bg-mediumGray ${
                 i === 0 ? "col-span-2 md:col-span-1" : ""
               }`}
             >
@@ -20,8 +20,10 @@ const ImagetextCard = ({ styles, arr, news }) => {
                 src={item[0][i]}
                 alt=""
               />
-              <div className="flex flex-col gap-4 p-6 justify-between h-full text-lg leading-tight">
-                <h1 className="text-xl font-semibold">{item[1][i]}</h1>
+              <div className="flex group-hover:group flex-col gap-4 p-6 justify-between h-full text-lg leading-tight">
+                <h1 className="text-xl font-semibold group-hover:bg-lightGray cursor-pointer">
+                  {item[1][i]}
+                </h1>
                 <p>{item[2][i]}</p>
                 <p className="text-sm justify-self-end"> {news[i]}| News</p>
               </div>

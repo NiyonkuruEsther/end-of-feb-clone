@@ -30,8 +30,11 @@ const ImageTextGrid = ({ reverse, src, p, h, arr }) => {
           <p className="text-lg">{p}</p>
           {arr.map((item, i) => {
             return (
-              <div className="flex items-center gap-4 text-lg" key={i}>
-                <AiOutlineArrowRight />
+              <div
+                className="flex group group-hover:bg-lightGray cursor-pointer items-center gap-4 text-lg"
+                key={i}
+              >
+                <AiOutlineArrowRight className="group-hover:translate-x-2" />
                 <p className="underline">{item}</p>
               </div>
             );

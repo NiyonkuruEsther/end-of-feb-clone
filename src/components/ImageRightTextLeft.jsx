@@ -12,12 +12,12 @@ const ImageRightTextLeft = ({ arr, h, p, styles, yes }) => {
           return (
             <div
               key={i}
-              className={`flex border justify-between border-white gap-4 ${
+              className={` group flex border justify-between border-white gap-4 ${
                 i === 2 && yes ? " hidden" : ""
               }`}
             >
-              <div className="flex flex-col justify-end lg:gap-2 p-5">
-                <h1 className="text-xl md:text-sm xl:text-2xl font-semibold">
+              <div className="group-hover:group flex flex-col justify-end lg:gap-2 p-5">
+                <h1 className="text-xl group-hover:bg-lightGray cursor-pointer md:text-sm xl:text-2xl font-semibold">
                   {item[0][i]}
                 </h1>
                 <p className=" md:text-xs xl:text-lg">{item[1][i]}</p>

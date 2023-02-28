@@ -42,38 +42,44 @@ const Navbar = () => {
           Aalto University
         </h4>
       </div>
-      <div className="flex items-center gap-10">
+      <div className=" hidden lg:flex items-center gap-6">
         <ul className="flex items-center gap-10">
           <li>
-            <Link className="flex items-center gap-2 " href="/support">
+            <Link
+              className="flex items-center gap-2 hover:bg-lightGray p-1 "
+              href="/support"
+            >
               <BiLockAlt size={20} />
               <span>For personnel</span>
             </Link>
           </li>
           <li>
-            <Link className="flex items-center gap-2 " href="/support">
+            <Link
+              className="flex items-center gap-2 hover:bg-lightGray p-1 "
+              href="/support"
+            >
               <CiHeart size={20} />
               <span>Support us</span>
             </Link>
           </li>
         </ul>
         <ul className="flex items-center gap-10 border-l pl-10">
-          <li className="flex items-center gap-2">
+          <li className="flex items-center gap-2 hover:bg-lightGray p-1">
             <IoGlobeSharp />
             <span>EN</span>
             <BiChevronDown />{" "}
           </li>
-          <li className="flex items-center gap-2">
+          <li className="flex items-center gap-2 hover:bg-lightGray p-1">
             <BiSearch />
             <span>Search</span>
           </li>
-          <li className="flex items-center gap-2">
+          <li className="flex items-center gap-2 hover:bg-lightGray p-1">
             <BiMenu /> <span>Menu</span>
           </li>
         </ul>
         <Link
           href="login"
-          className="bg-white text-darkGray py-2 px-8 rounded-full"
+          className="bg-white text-darkGray py-2 px-8 rounded-full hover:bg-lightBlue hover:text-white"
         >
           Login
         </Link>

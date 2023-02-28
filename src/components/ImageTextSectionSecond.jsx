@@ -9,7 +9,7 @@ const ImageTextSectionSecond = () => {
         {" "}
         <div className="flex justify-between">
           <h1 className="text-[28px]">Join our many events </h1>
-          <button className="border md:block hidden border-white rounded-full px-6 ">
+          <button className="border hover:border-none hover:bg-lightBlue hover:text-white md:block hidden border-white rounded-full px-6 ">
             See all events
           </button>
         </div>
@@ -40,7 +40,7 @@ const ImageTextSectionSecond = () => {
           ]}
           news={["21.02.23", "21.02.23", "21.02.23"]}
         />
-        <button className="md:hidden mx-5 py-2 flex flex-col items-center border border-white rounded-full w-fit px-6 ">
+        <button className="md:hidden hover:border-none mx-5 py-2 hover:bg-lightBlue hover:text-white flex flex-col items-center border border-white rounded-full w-fit px-6 ">
           Lorem text here
         </button>
       </div>

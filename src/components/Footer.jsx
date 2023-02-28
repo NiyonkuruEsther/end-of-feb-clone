@@ -131,7 +131,7 @@ const Footer = () => {
           </p>
           <button
             className={
-              "bg-white inline-flex text-black rounded-full py-3 px-5 whitespace-nowrap"
+              "bg-white inline-flex hover:border-none hover:bg-lightBlue hover:text-white text-black rounded-full py-3 px-5 whitespace-nowrap"
             }
           >
             Donate to Aalto University{" "}
