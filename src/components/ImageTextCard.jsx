@@ -4,16 +4,22 @@ import Wrapper from "./Wrapper";
 const ImagetextCard = ({ styles, arr, news }) => {
   return (
     <Wrapper styles={` text-white flex flex-col gap-5 ${styles}`}>
-      <div className="grid grid-cols-3 gap-4  text-white">
+      <div className="grid max-h-fit h-min grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-3 gap-4  text-white">
         {arr.map((item, i) => {
           item = [...arr];
           console.log(item[2]);
           return (
             <div
               key={i}
-              className="flex flex-col gap-2 border border-white bg-mediumGray"
+              className={`flex flex-col gap-2 border h-min md:h-full border-white bg-mediumGray ${
+                i === 0 ? "col-span-2 md:col-span-1" : ""
+              }`}
             >
-              <img className="max-h-44 object-cover" src={item[0][i]} alt="" />
+              <img
+                className="xl:max-h-44 object-cover"
+                src={item[0][i]}
+                alt=""
+              />
               <div className="flex flex-col gap-4 p-6 justify-between h-full text-lg leading-tight">
                 <h1 className="text-xl font-semibold">{item[1][i]}</h1>
                 <p>{item[2][i]}</p>

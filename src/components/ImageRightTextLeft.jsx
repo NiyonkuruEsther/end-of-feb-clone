@@ -1,25 +1,29 @@
 import React from "react";
 import Wrapper from "./Wrapper";
 
-const ImageRightTextLeft = ({ arr, h, p }) => {
+const ImageRightTextLeft = ({ arr, h, p, styles, yes }) => {
   return (
     <Wrapper styles={`bg-mediumGray text-white flex flex-col gap-6`}>
       <p className="text-[30px]">{h}</p>
       <p className="text-lg">{p}</p>
-      <div className="grid grid-cols-2 gap-5">
+      <div className={`grid md:grid-cols-2 gap-2 lg:gap-5 ${styles}`}>
         {arr.map((item, i) => {
           item = [...arr];
           return (
             <div
               key={i}
-              className="flex border justify-between border-white gap-4"
+              className={`flex border justify-between border-white gap-4 ${
+                i === 2 && yes ? " hidden" : ""
+              }`}
             >
-              <div className="flex flex-col justify-end gap-2 whitespace-preline p-5">
-                <h1 className="text-2xl">{item[0][i]}</h1>
-                <p className="text-lg">{item[1][i]}</p>
+              <div className="flex flex-col justify-end lg:gap-2 p-5">
+                <h1 className="text-xl md:text-sm xl:text-2xl font-semibold">
+                  {item[0][i]}
+                </h1>
+                <p className=" md:text-xs xl:text-lg">{item[1][i]}</p>
               </div>
               <img
-                className="max-h-36 w-40 object-center object-cover"
+                className="lg:max-h-36 max-h-32 w-40 object-center object-cover"
                 src={item[2][i]}
                 alt=""
               />

@@ -24,16 +24,18 @@ const Navbar = () => {
         scrolled > 19 ? " py-1" : "py-3 transition-all delay-200"
       }`}
     >
-      <div className="group flex flex-col justify-center items-center">
+      <div className="group flex flex-col justify-center max-w-fit items-center">
         <h1
-          className={` font-bold group-hover:after:content-["\""] after:content-["?"] ${
+          className={`group-hover:group font-bold flex  ${
             scrolled > 19 ? " text-2xl" : "text-7xl transition-all delay-200"
           } `}
         >
-          A
+          <span>A</span>
+          <span className="group-hover:hidden">?</span>
+          <span className="group-hover:block hidden">&quot;</span>
         </h1>
         <h4
-          className={`${
+          className={` ${
             scrolled > 19 ? "text-[6px]" : "text-xs transition-all delay-200"
           } `}
         >

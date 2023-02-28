@@ -25,7 +25,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-mediumGray">
+      <div className="bg-mediumGray overflow-hidden">
         <div className="bg-mediumGray ">
           <Navbar />
         </div>
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="bg-mediumGray">
             <Explore />
           </div>
-          <div className="bg-mediumGray pt-16 pb-24">
+          <div className="bg-mediumGray lg:pt-16 pb-24">
             <IconTextCard
               h="Important quicklinks"
               arr={[
@@ -92,7 +92,7 @@ export default function Home() {
             h={"Explore our six schools "}
             p="Scientific research and artistic activities are carried out at six schools and their departments and units."
           />
-          <div className="py-20">
+          <div className="py-12 lg:py-20">
             <ImageTextGrid
               h={"Campus - lively and thriving"}
               arr={[
@@ -109,7 +109,7 @@ export default function Home() {
 
           <div className="pb-20">
             <ImageTextGrid
-              reverse={"order-last"}
+              reverse={"md:order-last order-first"}
               h={"Virtual Campus Experience"}
               p="Explore Aalto University’s campus from anywhere in the world! Our digital guides, an Aalto University student and an assistant professor, introduce you to our learning facilities, laboratories, workshops, service spots and outdoor spaces. The tour can be experienced on desktop, mobile or VR headset."
               src={
@@ -166,7 +166,10 @@ export default function Home() {
           <div className="bg-darkGray py-12">
             <ImageTextDown
               grid={false}
-              styles={"grid-cols-3"}
+              yes={true}
+              styles={
+                "gap-4 h-fit md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-3"
+              }
               h={[
                 "Ukraine war",
                 "Information on coronavirus",
@@ -194,6 +197,7 @@ export default function Home() {
               </h1>
             </Wrapper>
             <ImageRightTextLeft
+              yes={true}
               arr={[
                 [
                   "School of Arts, Design and Architecture",
@@ -222,8 +226,8 @@ export default function Home() {
             <div className="">
               <ImageTextDown
                 grid={false}
-                styles={"grid-cols-2 text-3xl"}
-                imgSizes={"max-h-56 object-centers  object-cover"}
+                styles={"grid-cols-1 gap-4 md:grid-cols-2 text-3xl"}
+                imgSizes={"max-h-56 object-center object-cover"}
                 h={["Ukraine war", "Information on coronavirus"]}
                 arr={[
                   [

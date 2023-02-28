@@ -4,9 +4,9 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function HeroSection() {
   return (
-    <div className=" max-w-[1890px] max-h-[1280px] flex items-end h-[420px] mx-auto bg-cover bg-[url('https://www.aalto.fi/sites/g/files/flghsv161/files/styles/3_0_1920w_640h_d/public/2023-02/Aalto_14_6_19_0006.jpg?h=3ae58c8b&itok=9CiU06kp')]">
-      <div className="-mb-12 inset-x-0 z-50 pl-10 xl:w-[1500px] 2xl:mx-auto xl:flex xl:items-start justify-start xl:max-w-full">
-        <div className="bg-black text-white self-start py-6 xl:max-w-[680px] px-12 ">
+    <div className=" max-w-[1890px] xl:max-h-[1280px] flex items-end xl:h-[420px] mx-auto bg-cover xl:bg-[url('https://www.aalto.fi/sites/g/files/flghsv161/files/styles/3_0_1920w_640h_d/public/2023-02/Aalto_14_6_19_0006.jpg?h=3ae58c8b&itok=9CiU06kp')]">
+      <div className="xl:-mb-12 inset-x-0 z-50 xl:pl-10 xl:w-[1500px] 2xl:mx-auto xl:flex xl:items-start justify-start xl:max-w-full">
+        <div className="bg-black text-white self-start py-6 xl:max-w-[680px] px-5 md:px-10 lg:px-20 xl:px-12 ">
           <h1 className="text-[34px] leading-[42px] mb-4">
             How tech is transforming diagnostics and care
           </h1>
@@ -48,6 +48,11 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+        <img
+          className="xl:hidden"
+          src="https://www.aalto.fi/sites/g/files/flghsv161/files/styles/3_0_1920w_640h_d/public/2023-02/Aalto_14_6_19_0006.jpg?h=3ae58c8b&itok=9CiU06kp"
+          alt=""
+        />
       </div>
     </div>
   );

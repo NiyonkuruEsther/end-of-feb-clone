@@ -8,20 +8,25 @@ const ImageTextDown = ({
   h,
   otherStyles,
   imgSizes,
-  cardStyles,
+  yes,
 }) => {
   return (
     <Wrapper styles={" text-white"}>
       <div
         className={`grid gap-x-4 ${otherStyles} ${
-          grid === false ? styles : " grid-cols-4"
+          grid === false ? styles : "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         }`}
       >
         {arr.map((item, i) => {
           item = [...arr];
 
           return (
-            <div className="flex flex-col gap-1 bg-mediumGray" key={i}>
+            <div
+              className={`h-fit flex flex-col gap-1 bg-mediumGray ${
+                i === 0 ? " lg:col-span-1" : ""
+              } ${i === 0 && yes ? " md:col-span-2 lg:col-span-1 " : ""}`}
+              key={i}
+            >
               <img src={item[0][i]} alt="" className={`${imgSizes}`} />
               <div
                 className={` flex flex-col gap-5 ${
