@@ -17,13 +17,15 @@ const ImageRightTextLeft = ({ arr, h, p, styles, yes }) => {
               }`}
             >
               <div className="group-hover:group flex flex-col justify-end lg:gap-2 p-5">
-                <h1 className="text-xl group-hover:bg-lightGray cursor-pointer md:text-sm xl:text-2xl font-semibold">
+                <h1 className="text-sm lg:text-xl group-hover:bg-lightGray cursor-pointer md:text-sm xl:text-2xl font-semibold">
                   {item[0][i]}
                 </h1>
-                <p className=" md:text-xs xl:text-lg">{item[1][i]}</p>
+                <p className="text-[10px] md:text-xs xl:text-lg">
+                  {item[1][i]}
+                </p>
               </div>
               <img
-                className="lg:max-h-36 group-hover:brightness-90 max-h-44 w-40 object-center object-cover"
+                className="lg:max-h-36 group-hover:brightness-90 max-h-full w-40 object-center object-cover"
                 src={item[2][i]}
                 alt=""
               />
