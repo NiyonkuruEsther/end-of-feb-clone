@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import ImagetextCard from "@/components/ImageTextCard";
 import IconTextCard from "@/components/IconTextCard";
 import ImageRightTextLeft from "@/components/ImageRightTextLeft";
 import ImageTextGrid from "@/components/ImageTextGrid";
@@ -29,7 +28,7 @@ export default function Home() {
         <div className="bg-mediumGray ">
           <Navbar />
         </div>
-        <div className="bg-mediumGray pt-[110px]">
+        <div className="bg-mediumGray pt-12 lg:pt-[110px]">
           <HeroSection />
         </div>
         <div className="flex flex-col ">
@@ -42,7 +41,7 @@ export default function Home() {
           <div className="bg-mediumGray">
             <Explore />
           </div>
-          <div className="bg-mediumGray lg:pt-16 pb-24">
+          <div className="bg-mediumGray pt-16 pb-24">
             <IconTextCard
               h="Important quicklinks"
               arr={[
@@ -244,7 +243,7 @@ export default function Home() {
           </div>
           <BlueBgSection />
         </div>
-        <div className="bg-darkGray">
+        <div className="bg-mediumGray">
           <Footer />
         </div>
       </div>

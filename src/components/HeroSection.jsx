@@ -63,7 +63,7 @@ export default function HeroSection() {
                 <div key={i} className="group">
                   <div className="flex gap-2 items-center  group-hover:bg-white w-fit">
                     <AiOutlineArrowRight
-                      onClick={prevSlide}
+                      onClick={nextSlide}
                       className="text w-5 h-5 "
                     />
                     <span className="text underline group-hover:text-black">
@@ -103,11 +103,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <img
-          className="xl:hidden"
-          src="https://www.aalto.fi/sites/g/files/flghsv161/files/styles/3_0_1920w_640h_d/public/2023-02/Aalto_14_6_19_0006.jpg?h=3ae58c8b&itok=9CiU06kp"
-          alt=""
-        />
+        <img className="xl:hidden" src={slides[currentIndex].url} alt="" />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const ImageTextSection = () => {
       <Wrapper styles={` pb-6 gap-3 flex flex-col`}>
         <div className="flex justify-between">
           <h1 className="text-[28px]">Spotlight </h1>
-          <button className="hover:bg-lightBlue  hover:text-white hidden md:block border border-white hover:border-none rounded-full px-6 ">
+          <button className="hover:bg-lightBlue  hover:text-white hidden md:block border border-white hover:border-lightBlue rounded-full px-6 ">
             Lorem text here
           </button>
         </div>
@@ -41,7 +41,7 @@ const ImageTextSection = () => {
           ]}
           news={["21.02.23", "21.02.23", "21.02.23"]}
         />
-        <button className="hover:border-none md:hidden hover:bg-lightBlue hover:text-white mx-5 py-2 flex flex-col items-center border border-white rounded-full px-6 w-fit">
+        <button className="hover:border-lightBlue md:hidden hover:bg-lightBlue hover:text-white mx-5 py-2 flex flex-col items-center border border-white rounded-full px-6 w-fit">
           Lorem text here
         </button>
       </div>
