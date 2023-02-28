@@ -257,7 +257,7 @@ const Navbar = () => {
                   </p>
                 </div>
 
-                <div className="flex flex-col justify-between cursor-pointer pb-12">
+                <div className="flex flex-col justify-between cursor-pointer  pb-12">
                   {[
                     "Admissions and applying",
                     "News and events",
@@ -273,9 +273,9 @@ const Navbar = () => {
                       <details
                         key={i}
                         // href={e}
-                        className="block border-y group "
+                        className="block  border-y group "
                       >
-                        <summary className="flex  hover:bg-lightGray items-center justify-between p-6 py-4 hover:bg-brandGray-light h-fit ">
+                        <summary className="flex hover:border-l-4 hover:bg-lightGray items-center justify-between p-6 py-4 hover:bg-brandGray-light h-fit ">
                           <p className="text-2xl font-bold leading-[30px] whitespace-nowrap ">
                             {" "}
                             {item}
