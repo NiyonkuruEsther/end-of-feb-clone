@@ -23,7 +23,7 @@ const ImageRightTextLeft = ({ arr, h, p, styles, yes }) => {
                 <p className=" md:text-xs xl:text-lg">{item[1][i]}</p>
               </div>
               <img
-                className="lg:max-h-36 group-hover:brightness-90 max-h-32 w-40 object-center object-cover"
+                className="lg:max-h-36 group-hover:brightness-90 max-h-44 w-40 object-center object-cover"
                 src={item[2][i]}
                 alt=""
               />
