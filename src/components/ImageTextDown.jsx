@@ -22,18 +22,26 @@ const ImageTextDown = ({
 
           return (
             <div
-              className={`h-fit flex flex-col gap-1 bg-mediumGray ${
+              className={`h-fit group flex flex-col gap-1 bg-mediumGray ${
                 i === 0 ? " lg:col-span-1" : ""
               } ${i === 0 && yes ? " md:col-span-2 lg:col-span-1 " : ""}`}
               key={i}
             >
-              <img src={item[0][i]} alt="" className={`${imgSizes}`} />
+              <img
+                src={item[0][i]}
+                alt=""
+                className={` brightness-100 group-hover:brightness-90 transition-all duration-300 ${imgSizes}`}
+              />
               <div
-                className={` flex flex-col gap-5 ${
+                className={`group-hover:group flex flex-col gap-5 ${
                   grid === false ? "px-6 pb-8 " : " pb-4"
                 }`}
               >
-                {h && <h1 className="text-[20px] font-semibold">{h[i]}</h1>}
+                {h && (
+                  <h1 className="text-[20px] group-hover:bg-lightGray w-fit font-semibold ">
+                    {h[i]}
+                  </h1>
+                )}
 
                 <p className="text-[16px] leading-tight">{item[1][i]}</p>
               </div>

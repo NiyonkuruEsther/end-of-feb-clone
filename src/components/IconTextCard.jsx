@@ -15,7 +15,7 @@ const IconTextCard = ({ arr, h }) => {
               key={i}
             >
               <img
-                className="rounded-full cursor-pointer max-w-[85px] w-[64px] md:w-max"
+                className="rounded-full group-hover:brightness-90 cursor-pointer max-w-[85px] w-[64px] md:w-max"
                 src={item[1][i]}
                 alt=""
               />
