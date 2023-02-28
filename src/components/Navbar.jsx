@@ -4,11 +4,7 @@ import { BiChevronDown, BiLockAlt, BiMenu, BiSearch } from "react-icons/bi";
 import { CiHeart } from "react-icons/ci";
 import { IoGlobeSharp } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
-import { FaResearchgate } from "react-icons/fa";
-import { AiOutlineHeart, AiOutlineGlobal, AiOutlinePlus } from "react-icons/ai";
-import { MdClose, MdKeyboardArrowUp } from "react-icons/md";
-import { FiSearch } from "react-icons/fi";
-
+import { AiOutlinePlus } from "react-icons/ai";
 import { FaGraduationCap } from "react-icons/fa";
 import { TbFilePencil } from "react-icons/tb";
 import { BsFillMenuButtonFill } from "react-icons/bs";
